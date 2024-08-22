@@ -1,0 +1,37 @@
+models:
+    Propiedade:
+        id: id
+        numero_unidad: string
+        ubicacion: string
+        id_personas: bigInteger unsigned foreign:personas.id
+        id_coutas: bigInteger unsigned foreign:cuotas.id
+    Persona:
+        id: id
+        nombre: string
+        telefono: integer
+    IngresosEgreso:
+        id: id
+        documento: integer
+        valor: float
+        fecha: timestamp
+        descripcion: text
+        id_metodo_pago: bigInteger foreign:metodo_pago.id
+        id_propiedades: bigInteger foreign:propiedades.id
+    ValorCuota:
+        id: id
+        fecha: timestamp
+        id_propedades: bigInteger foreign:propiedades.id
+    Dato:
+        id: id
+        nombre: string
+        direccion: bigInteger
+        ruc: bigInteger
+        telefono: bigInteger
+        imagen: string
+    MetodoPago:
+        id: id
+        tipo: bigInteger
+    Cuota:
+        id: id
+        valor: float
+        estado: string

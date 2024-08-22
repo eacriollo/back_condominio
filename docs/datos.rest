@@ -1,0 +1,31 @@
+POST http://127.0.0.1:8000/api/dato
+Accept: application/json
+content-type: application/json
+
+{
+    "nombre": "EDIFICIO DYssfs",
+    "direccion": "asdfh",
+    "ruc": "4545648454",
+    "telefono": "454545454",
+    "imagen": ""
+}
+
+###
+
+GET  http://127.0.0.1:8000/api/dato
+Accept: application/json
+content-type: application/json
+
+
+###
+PUT  http://127.0.0.1:8000/api/dato/1
+Accept: application/json
+content-type: application/json
+
+{
+    "nombre": "EDIFICIO DANY",
+    "direccion": "YARUQUI Y YANAHURCO",
+    "ruc": "4545648454",
+    "telefono": "454545454",
+    "imagen": ""
+}

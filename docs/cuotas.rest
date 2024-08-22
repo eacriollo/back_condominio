@@ -1,0 +1,13 @@
+POST http://127.0.0.1:8000/api/cuota
+Accept: application/json
+content-type: application/json
+
+{
+    "valor": 20.50,
+    "estado": "activo"
+}
+
+###
+GET http://127.0.0.1:8000/api/cuota
+Accept: application/json
+content-type: application/json

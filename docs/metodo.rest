@@ -1,0 +1,12 @@
+POST http://127.0.0.1:8000/api/metodoPago
+Accept: application/json
+content-type: application/json
+
+{
+    "tipo": "EFECTIVO"
+}
+
+###
+GET http://127.0.0.1:8000/api/metodoPago
+Accept: application/json
+content-type: application/json

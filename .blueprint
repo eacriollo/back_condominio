@@ -1,0 +1,30 @@
+created:
+    - database/factories/PropiedadeFactory.php
+    - database/factories/PersonaFactory.php
+    - database/factories/IngresosEgresoFactory.php
+    - database/factories/ValorCuotaFactory.php
+    - database/factories/DatoFactory.php
+    - database/factories/MetodoPagoFactory.php
+    - database/factories/CuotaFactory.php
+    - database/migrations/2024_08_19_174242_create_propiedades_table.php
+    - database/migrations/2024_08_19_174243_create_personas_table.php
+    - database/migrations/2024_08_19_174244_create_ingresos_egresos_table.php
+    - database/migrations/2024_08_19_174245_create_valor_cuotas_table.php
+    - database/migrations/2024_08_19_174246_create_datos_table.php
+    - database/migrations/2024_08_19_174247_create_metodo_pagos_table.php
+    - database/migrations/2024_08_19_174248_create_cuotas_table.php
+    - app/Models/Propiedade.php
+    - app/Models/Persona.php
+    - app/Models/IngresosEgreso.php
+    - app/Models/ValorCuota.php
+    - app/Models/Dato.php
+    - app/Models/MetodoPago.php
+    - app/Models/Cuota.php
+models:
+    Propiedade: { id: id, numero_unidad: string, ubicacion: string, id_personas: 'bigInteger unsigned foreign:personas.id', id_coutas: 'bigInteger unsigned foreign:cuotas.id' }
+    Persona: { id: id, nombre: string, telefono: integer }
+    IngresosEgreso: { id: id, documento: integer, valor: float, fecha: timestamp, descripcion: text, id_metodo_pago: 'bigInteger foreign:metodo_pago.id', id_propiedades: 'bigInteger foreign:propiedades.id' }
+    ValorCuota: { id: id, fecha: timestamp, id_propedades: 'bigInteger foreign:propiedades.id' }
+    Dato: { id: id, nombre: string, direccion: bigInteger, ruc: bigInteger, telefono: bigInteger, imagen: string }
+    MetodoPago: { id: id, tipo: bigInteger }
+    Cuota: { id: id, valor: float, estado: string }
