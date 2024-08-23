@@ -13,7 +13,7 @@ class MetodoPagoController extends Controller
     public function index()
     {
         //
-        $metodo = MetodoPago::get();
+        $metodo = MetodoPago::orderby('tipo', 'asc')->get();
 
         return response()->json($metodo, 200);
     }

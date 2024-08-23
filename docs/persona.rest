@@ -3,7 +3,7 @@ Accept: application/json
 content-type: application/json
 
 {
-    "nombre": "LUIS CRIOLLO",
+    "nombre": "ANDRES CRIOLLO",
     "telefono": "4545454777"
 }
 
