@@ -28,4 +28,9 @@ class Cuota extends Model
         'id' => 'integer',
         'valor' => 'float',
     ];
+
+    public function propiedad()
+    {
+        return $this->hasMany(Propiedade::class);
+    }
 }

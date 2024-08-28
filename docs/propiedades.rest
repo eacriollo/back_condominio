@@ -1,0 +1,16 @@
+POST http://127.0.0.1:8000/api/propiedad
+Accept: application/json
+content-type: application/json
+
+{
+    "numero_unidad": "DEP 001",
+    "ubicacion": "PLANTA BAJA",
+    "id_personas": "2",
+    "id_cuotas": 1
+}
+
+###
+GET http://127.0.0.1:8000/api/propiedad
+Accept: application/json
+content-type: application/json
+

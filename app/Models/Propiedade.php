@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
+
 
 class Propiedade extends Model
 {
@@ -33,13 +33,13 @@ class Propiedade extends Model
         'id_coutas' => 'integer',
     ];
 
-    public function idPersonas(): BelongsTo
+    public function persona()
     {
-        return $this->belongsTo(Persona::class);
+        return $this->belongsTo(Persona::class, 'id_personas');
     }
 
-    public function idCoutas(): BelongsTo
+    public function cuota()
     {
-        return $this->belongsTo(Cuota::class);
+        return $this->belongsTo(Cuota::class, 'id_cuotas');
     }
 }

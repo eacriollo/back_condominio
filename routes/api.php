@@ -7,6 +7,7 @@ use App\Http\Controllers\CuotaControllers;
 use App\Http\Controllers\DatosControllers;
 use App\Http\Controllers\MetodoPagoController;
 use App\Http\Controllers\PersonaController;
+use App\Http\Controllers\PropiedadesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,3 +43,4 @@ Route::apiResource("dato", DatosControllers::class);
 Route::apiResource("cuota", CuotaControllers::class);
 Route::apiResource("persona", PersonaController::class);
 Route::apiResource("metodoPago", MetodoPagoController::class);
+Route::apiResource("propiedad", PropiedadesController::class);

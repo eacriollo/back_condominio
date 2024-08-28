@@ -27,4 +27,9 @@ class Persona extends Model
     protected $casts = [
         'id' => 'integer',
     ];
+
+    public function propiedad()
+    {
+        return $this->hasMany(Propiedade::class);
+    }
 }
